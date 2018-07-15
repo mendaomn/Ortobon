@@ -22,7 +22,8 @@
     "build-js": "node build/transpile-javascript.js",
     "release": "npm version patch && npm run build",
     "deploy": "git push heroku master",
-    "publish-on-github": "git push origin master"
+    "publish-on-github": "git push -u origin master",
+    "heroku-postbuild": "npm install --only=dev && npm run build"
   },
   "watch": {
     "build-sass": {
