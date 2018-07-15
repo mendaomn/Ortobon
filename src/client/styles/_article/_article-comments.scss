@@ -1,0 +1,77 @@
+// Size
+$ac-w: 600px;
+
+// Spacing
+$ac-pad: 50px;
+$ac-title-margin: 25px;
+$ac-name-margin: 15px;
+$ac-item-margin: 25px;
+$ac-item-margin-l: 50px;
+
+.c-article-comments {
+  @include _sidepadding;
+  padding-top: $ac-pad;
+  padding-bottom: $ac-pad;
+}
+
+.c-article-comments__title {
+  margin-bottom: $ac-title-margin;
+}
+
+.c-article-comments__list {
+  @include _listreset;
+}
+
+.c-article-comments__item {
+  position: relative;
+  display: block;
+  margin-bottom: $ac-item-margin;
+  font-size: $_fs-small;
+}
+
+.c-article-comments__item-name {
+  margin-bottom: $ac-name-margin;
+  font-weight: bold;
+}
+
+.c-article-comments__item-delete {
+  position: absolute;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  background: {
+    color: transparent;
+    image: url(/static/images/optimized/delete.svg);
+    size: contain;
+    repeat: no-repeat;
+  }
+  border: none;
+  cursor: pointer;
+}
+
+.c-article-comments__item-content {
+  width: 100%;
+}
+
+.c-article-comments__new {
+  margin-top: $ac-item-margin-l;
+
+  .c-article-comments__item-content {
+    height: 35px;
+
+    &:focus {
+      height: 75px;
+    }
+  }
+}
+
+.c-article-comments__send-btn {
+  margin-top: $ac-name-margin;
+}
+
+@media (min-width: $_bp-m) {
+  .c-article-comments {
+    margin: 0 auto;
+    max-width: $ac-w;
+  }
+}

@@ -1,0 +1,36 @@
+<section class="o-strip o-strip--both c-ultimi-articoli">
+  <div class="o-strip__left c-ultimi-articoli__ricetta">
+      {>"partials/components/title"
+        class="o-strip__headline-title"
+        large="true"
+        text=content.latest.recipe.name
+      /}
+      {>"partials/components/text-block"
+        class="o-strip__headline-lead"
+        text=content.latest.recipe.intro
+      /}
+      {>"partials/components/button"
+        class="o-strip__headline-cta"
+        urlbase="/blog/"
+        url=content.latest.recipe._id
+        text="Vai alla ricetta"
+      /}
+    </div>
+    <div class="o-strip__right c-ultimi-articoli__articolo">
+      {>"partials/components/title"
+        class="o-strip__headline-title"
+        large="true"
+        text=content.latest.article.name
+      /}
+      {>"partials/components/text-block"
+        class="o-strip__headline-lead"
+        text=content.latest.article.intro
+      /}
+      {>"partials/components/button"
+        class="o-strip__headline-cta"
+        urlbase="/blog/"
+        url=content.latest.article._id
+        text="Leggi il post"
+      /}
+    </div>
+</section>

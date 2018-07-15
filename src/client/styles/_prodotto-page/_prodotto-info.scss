@@ -1,0 +1,32 @@
+// Spacing
+$prod-info-padding-bottom: 150px;
+$prod-info-padding-bottom-s: 50px;
+$prod-info-title-margin-top: 30px;
+$prod-info-title-margin-bottom: 15px;
+
+.c-prodotto-info {
+  @include _sidepadding;
+
+  padding-bottom: $prod-info-padding-bottom;
+
+  .o-text-block-title {
+    margin-top: $prod-info-title-margin-top;
+    margin-bottom: $prod-info-title-margin-bottom;
+  }
+
+  .o-table td:first-child {
+    font-weight: bold;
+  }
+
+  .o-text-block a {
+    color: $_color-brown;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $_bp-m) {
+  .c-prodotto-info {
+    padding-bottom: $prod-info-padding-bottom-s;
+  }
+}

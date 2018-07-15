@@ -1,0 +1,26 @@
+// Vars
+$blog-headline-width: 422px;
+$blog-headline-width-s: 318px;
+$blog-strip-height: 300px;
+
+.c-masthead-blog {
+  @include _overlay(black, to left);
+
+  margin-top: -$nav-height;
+  min-height: $blog-strip-height;
+  background: {
+    color: $_color-darkshaft;
+    image: url(/static/images/optimized/blog-masthead.jpeg);
+    position: center;
+    size: cover;
+  }
+  color: $_color-white;
+}
+
+.c-masthead-blog .o-strip__headline {
+  max-width: $blog-headline-width-s;
+
+  @media (min-width: $_bp-m) {
+    max-width: $blog-headline-width;
+  }
+}

@@ -1,0 +1,14 @@
+{>"partials/header" title=title styles=inlines.css preloads=asyncStyles /} {>"partials/components/masthead-prodotto-singolo" /}
+
+<div class="c-prodotto__info-and-ricette">
+	<div class="c-prodotto__info-container">
+		{>"partials/components/prodotto-info" /}
+  </div>
+  {#content.hasRecipes}
+	<div class="c-prodotto__ricette-container">
+		{>"partials/components/prodotto-ricette" /}
+  </div>
+  {/content.hasRecipes}
+</div>
+
+{>"partials/footer" inline=inlines.js scripts=scripts preloads=preloads cms=inlines.cms /}

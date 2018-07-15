@@ -1,0 +1,11 @@
+<div class="o-card c-3steps__card">
+  <div class="c-3steps__card-wrapper">
+    <img class="c-3steps__card-icon" src="{image}" alt="">
+    <div class="c-3steps__card-text">
+      {text|s}
+    </div>
+  </div>
+  <div class="c-3steps__card-footer">
+    {number}
+  </div>
+</div>

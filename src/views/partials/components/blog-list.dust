@@ -1,0 +1,11 @@
+<section class="c-blog-list__container">
+  {>"partials/components/text-block-title"
+    text="Ultimi articoli"
+  /}
+  <div class="c-blog-list">
+    {#content}
+      {>"partials/components/blog-card"
+      /}
+    {/content}
+  </div>
+</section>

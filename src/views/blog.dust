@@ -1,0 +1,20 @@
+{>"partials/header"
+  title=title
+  styles=inlines.css
+  preloads=asyncStyles
+/}
+
+{>"partials/components/masthead-blog"
+/}
+
+<div class="o-background-gray">
+  {>"partials/components/blog-list"
+  /}
+</div>
+
+{>"partials/footer"
+  inline=inlines.js
+  scripts=scripts
+  preloads=preloads
+  cms=inlines.cms
+/}

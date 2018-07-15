@@ -1,0 +1,9 @@
+<section class="o-strip o-strip--right c-masthead-blog">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text=content.mastheadtitle
+    /}
+  </div>
+</section>

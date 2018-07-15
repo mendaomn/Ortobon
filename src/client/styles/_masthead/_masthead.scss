@@ -1,0 +1,12 @@
+.c-masthead {
+  @include _overlay(black, to left);
+
+  margin-top: -$nav-height;
+  background: {
+    color: $_color-darkshaft;
+    image: url(/static/images/optimized/home-masthead.jpeg);
+    position: center;
+    size: cover;
+  }
+  color: $_color-white;
+}

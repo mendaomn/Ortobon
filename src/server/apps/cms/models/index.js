@@ -1,0 +1,10 @@
+require('./users.js');
+require('./homepage.js');
+require('./category.js');
+require('./prodotti.js');
+require('./prodotto.js');
+require('./about.js');
+require('./blog.js');
+require('./articolo.js');
+require('./comment.js');
+require('./footer.js');

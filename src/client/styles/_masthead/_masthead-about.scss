@@ -1,0 +1,26 @@
+// Vars
+$about-headline-width: 422px;
+$about-headline-width-s: 318px;
+$about-strip-height: 300px;
+
+.c-masthead-about {
+  @include _overlay(black, to left);
+
+  margin-top: -$nav-height;
+  min-height: $about-strip-height;
+  background: {
+    color: $_color-darkshaft;
+    image: url(/static/images/optimized/about-masthead.jpeg);
+    position: center;
+    size: cover;
+  }
+  color: $_color-white;
+}
+
+.c-masthead-about .o-strip__headline {
+  max-width: $about-headline-width-s;
+
+  @media (min-width: $_bp-m) {
+    max-width: $about-headline-width;
+  }
+}

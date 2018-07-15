@@ -1,0 +1,48 @@
+// Vars
+$blog-list-spacing: 25px;
+
+.c-blog-list__container {
+  padding: $grid-margin-side;
+}
+
+.c-blog-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: $blog-list-spacing;
+}
+
+@media (min-width: $_bp-m) and (max-width: $_bp-l - 1px){
+  .c-blog-list {
+    @include _clearfix;
+
+    display: block;
+
+    .c-blog-card {
+      float: left;
+      margin-right: $blog-list-spacing;
+      width: calc((100% - 25px) / 2);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $_bp-l) {
+  .c-blog-list {
+    @include _clearfix;
+
+    display: block;
+
+    .c-blog-card {
+      float: left;
+      margin-right: $blog-list-spacing;
+      width: calc((100% - 50px) / 3);
+
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
+    }
+  }
+}

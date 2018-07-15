@@ -1,0 +1,26 @@
+{>"partials/header"
+  title=title
+  styles=inlines.css
+  preloads=asyncStyles
+/}
+
+{>"partials/components/masthead"
+/}
+
+{>"partials/components/3steps"
+/}
+
+{>"partials/components/prodotti-strip"
+/}
+
+{>"partials/components/blog-strip"
+/}
+
+{>"partials/components/ultimi-articoli"
+/}
+
+{>"partials/footer"
+  inline=inlines.js
+  scripts=scripts
+  preloads=preloads
+/}

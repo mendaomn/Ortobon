@@ -1,0 +1,16 @@
+<div class="c-article-body">
+  <div class="c-article-body__name">{content.name}</div>
+  <div class="c-article-body__date">{content.date}</div>
+  {>"partials/components/text-block"
+    class="c-article-body__content"
+    text=content.content
+  /}
+  <ul class="c-article-body__tags">
+    {?content.isRecipe}
+      <li class="o-tag">Ricetta</li>
+    {/content.isRecipe}
+    {#content.tags}
+      <li class="o-tag">{.}</li>
+    {/content.tags}
+  </ul>
+</div>

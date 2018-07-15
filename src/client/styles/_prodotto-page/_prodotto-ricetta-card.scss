@@ -1,0 +1,63 @@
+// Size
+$pr-ricetta-img-height: 150px;
+
+// Spacing
+$pr-ricetta-padding:    15px;
+$pr-ricetta-spacing:    25px;
+$pr-ricetta-tag-spacing: 5px;
+$pr-ricetta-tag-spacing-l: 15px;
+
+.c-prodotto-ricetta {
+  display: block;
+  margin-bottom: $pr-ricetta-spacing;
+  padding: 0;
+  font-size: $_fs-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-pr-ricetta__info-wrapper {
+  padding: $pr-ricetta-padding;
+}
+
+.c-pr-ricetta__image {
+  width: 100%;
+  height: $pr-ricetta-img-height;
+  background: {
+    color: $_color-brown;
+    size: cover;
+    position: center;
+  }
+}
+
+.c-pr-ricetta__name {
+  font-weight: bold;
+}
+
+.c-pr-ricetta__intro {
+  margin-top: $pr-ricetta-padding;
+}
+
+.c-pr-ricetta__tags {
+  @include _listreset;
+
+  margin-top: $pr-ricetta-tag-spacing-l;
+
+  .o-tag {
+    margin-left: $pr-ricetta-tag-spacing;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.c-pr-ricetta__link {
+  display: inline-block;
+  margin-top: $pr-ricetta-spacing;
+  font-weight: bold;
+  color: $_color-brown;
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+<div class="c-article-comments">
+  {>"partials/components/text-block-title"
+    class="c-article-comments__title"
+    text="Risposte"
+  /}
+  <ul class="c-article-comments__list js-comments-list">
+    {# content.comments}
+      <li class="o-card c-article-comments__item" data-author-id="{author.id}" data-comment-id="{_id}">
+        <div class="c-article-comments__item-name">{author.name}</div>
+        <div class="c-article-comments__item-content">{content|s}</div>
+      </li>
+    {/ content.comments}
+  </ul>
+
+  <div class="o-card c-article-comments__item c-article-comments__new hidden" data-show-if-logged>
+    <div class="c-article-comments__item-name js-username">Utente</div>
+    <textarea class="o-input o-input--dark c-article-comments__item-content js-comment-input" placeholder="Scrivi una risposta ..."></textarea>
+    <button type="button" class="o-button o-button--inactive c-article-comments__send-btn js-comment-btn">Invia risposta</button>
+  </div>
+
+  <div class="o-card c-article-comments__item c-article-comments__new hidden" data-hide-if-logged>
+    <div class="c-article-comments__item-name">Effettua il login per commentare</div>
+    <div class="fb-login-button" data-on-login="onFacebookLogin" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-use-continue-as="true"></div>
+  </div>
+
+</div>

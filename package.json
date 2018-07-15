@@ -1,0 +1,84 @@
+{
+  "name": "mastrofood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server/index.js",
+    "open": "google-chrome --incognito \"http://localhost:8080\"",
+    "clean-dist": "rm -rf dist",
+    "make-dist": "mkdirp dist",
+    "make-client": "mkdirp dist/client/scripts",
+    "copy-all": "npm run copy-server && npm run copy-views && npm run copy-client",
+    "copy-server": "cp -R src/server dist",
+    "copy-views": "cp -R src/views dist",
+    "copy-client": "copy \"src/client/**/*.*\" \"!src/client/scripts/**/*.*\" \"!src/client/styles/**/*.*\" dist/client",
+    "serve": "nodemon -e dust,js,css,json dist/server/index.js",
+    "dev": "npm run build && parallelshell \"npm run watch\" \"npm run serve\"",
+    "watch": "npm-watch",
+    "build": "npm run clean-dist && npm run make-dist && npm run make-client &&  npm run build-img && npm run copy-all && npm run build-sass && npm run build-js",
+    "build-img": "node build/compress-images.js",
+    "build-sass": "node build/transpile-sass.js",
+    "build-js": "node build/transpile-javascript.js",
+    "release": "npm version patch && npm run build",
+    "deploy": "git push heroku master",
+    "publish-on-github": "git push origin master"
+  },
+  "watch": {
+    "build-sass": {
+      "patterns": "src/client",
+      "extensions": [
+        "scss"
+      ]
+    },
+    "build-js": {
+      "patterns": "src/client",
+      "extensions": [
+        "js"
+      ]
+    },
+    "copy-server": "src/server",
+    "copy-views": {
+      "patterns": "src/views",
+      "extensions": [
+        "dust",
+        "css",
+        "js"
+      ]
+    },
+    "copy-client": "src/client"
+  },
+  "engines": {
+    "node": "7.10.1"
+  },
+  "author": "Alessandro Menduni",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "clean-css": "^4.0.8",
+    "copy": "^0.3.0",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "npm-watch": "^0.1.8",
+    "parallelshell": "^2.0.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-npm": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "adaro": "^1.0.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.14.1",
+    "keystone": "^4.0.0-beta.1",
+    "newrelic": "^1.40.0",
+    "shopify-buy": "^1.4.0",
+    "unfetch": "^2.1.2"
+  }
+}

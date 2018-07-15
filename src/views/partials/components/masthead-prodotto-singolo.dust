@@ -1,0 +1,22 @@
+<section class="o-strip c-masthead-prodotto"
+  style="background-image: url({content.image.secure_url})">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text=content.name
+    /}
+
+    <!-- <div class="c-masthead-prodotto__price-container">
+      {#content.offer}
+        <div class="c-masthead-prodotto__price">{content.offerlabel} {content.offer}€</div>
+        <div class="c-masthead-prodotto__prev-price">invece che {content.pricelabel} {content.price}€</div>
+      {:else}
+        <div class="c-masthead-prodotto__price">{content.pricelabel} {content.price}€</div>
+      {/content.offer}
+    </div> -->
+
+    <div class="c-masthead-prodotto__buy-button js-buy-button" data-shopifyID={content.shopifyID}></div>
+
+  </div>
+</section>

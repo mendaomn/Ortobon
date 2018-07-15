@@ -1,0 +1,12 @@
+<section class="c-about-info-block {blockclass}">
+    {>"partials/components/text-block-title"
+      text=blocktitle
+    /}
+    <div class="c-about-info-block__content">
+      <div class="c-about-info-block__img" style="background-image: url({blockimage})"></div>
+
+      {>"partials/components/text-block"
+        text=blocktext
+      /}
+    </div>
+</section>

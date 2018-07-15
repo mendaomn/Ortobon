@@ -1,0 +1,17 @@
+<section class="o-strip c-blog-strip">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text="{content.articlestitle}"
+    /}
+    {>"partials/components/text-block"
+      class="o-strip__headline-lead"
+      text="{content.articlestext|s}"
+    /}
+    {>"partials/components/button"
+      class="o-button--dark o-strip__headline-cta"
+      text="{content.articlescta}"
+    /}
+  </div>
+</section>

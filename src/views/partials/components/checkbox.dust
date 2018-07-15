@@ -1,0 +1,4 @@
+<div class="o-checkbox {class}">
+  <input class="o-checkbox__input" id="{text}" type="radio" name="{radiogroup}" {?checked}checked{/checked} data-filter-type="{dataType}">
+  <label class="o-checkbox__label" for="{text}">{text}</label>
+</div>

@@ -1,0 +1,45 @@
+// Size
+$prod-info-width: 800px;
+$prod-ricette-width: 300px;
+
+// Custom BP
+$prod-bp-2cols: 600px;
+
+// Spacing
+
+.c-prodotto__info-and-ricette {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-prodotto__info-container {
+  flex: 1;
+  max-width: $prod-info-width;
+}
+
+.c-prodotto__ricette-container {
+  flex: 1;
+  max-width: $prod-ricette-width;
+}
+
+@media (max-width: $_bp-m) {
+  .c-prodotto__info-and-ricette {
+    flex-direction: column;
+  }
+
+  .c-prodotto__ricette-container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: $prod-bp-2cols) and (max-width: $_bp-m) {
+  .c-prodotto-ricetta {
+    float: left;
+    margin-left: $pr-ricetta-spacing;
+    width: calc( (100% - 25px) / 2 );
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+  }
+}

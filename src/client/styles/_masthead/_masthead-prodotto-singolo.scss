@@ -1,0 +1,45 @@
+// Vars
+$prodotto-price-margin: 15px;
+$prodotto-strip-height: 300px;
+$prodotto-strip-padding: 100px;
+
+.c-masthead-prodotto {
+  @include _overlay(black, to right);
+
+  align-items: flex-end;
+  padding-top: $prodotto-strip-padding;
+  margin-top: -$nav-height;
+  min-height: $prodotto-strip-height;
+  background: {
+    color: $_color-darkshaft;
+    position: center;
+    size: cover;
+  }
+  color: $_color-white;
+}
+
+.c-masthead-prodotto__price {
+  margin-top: $prodotto-price-margin;
+  color: $_color-lime;
+  font-size: $_fs-medium;
+  font-weight: bold;
+}
+
+.c-masthead-prodotto__prev-price {
+  font-size: $_fs-normal;
+  font-weight: bold;
+}
+
+.c-masthead-prodotto__buy-button {
+  margin-top: $prodotto-price-margin;
+}
+
+@media (max-width: $_bp-m) {
+  .c-masthead-prodotto__price {
+    font-size: $_fs-normal;
+  }
+
+  .c-masthead-prodotto__prev-price {
+    font-size: $_fs-small;
+  }
+}

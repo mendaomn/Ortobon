@@ -1,0 +1,36 @@
+{#mobile}
+
+  <div class="c-nav-overlay"></div>
+
+  <div class="c-nav-controls">
+    {>"partials/components/logo"
+    class="c-header-content-link"
+    /}
+    <div class="c-nav-mobile-close js-close-nav">
+      {>"partials/components/icon-close" /}
+    </div>
+    <div class="c-nav-mobile-open js-open-nav">
+      {>"partials/components/icon-open" /}
+    </div>
+  </div>
+
+
+  <ul class="c-nav-mobile {class}">
+    {#navitems}
+    <li class="c-nav__item {?active}active{/active}">
+      <a class="c-nav__item-link" href="{path}">{text}</a>
+    </li>
+    {/navitems}
+  </ul>
+
+{:else}
+
+  <ul class="c-nav {class}">
+    {#navitems}
+      <li class="c-nav__item {?active}active{/active}">
+        <a class="c-nav__item-link" href="{path}">{text}</a>
+      </li>
+    {/navitems}
+  </ul>
+
+{/mobile}

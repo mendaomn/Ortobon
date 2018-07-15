@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alessandro Menduni" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0">
+
+  <title>{title}</title>
+  <meta name="description" content="{content.meta_description}">
+
+  {#preloads}
+    <link rel="preload" href="{path}" as="{type}">
+  {/preloads}
+
+  {#css}
+    <link rel="stylesheet" href="{@hash path=.}{/hash}">
+  {/css}
+  <style>
+    {styles|s}
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101056966-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-101056966-2', {
+      'page_title' : '{title}',
+      'page_path': '{path}'
+    });
+  </script>
+
+</head>
+<!-- Version {version} -->
+<body>
+  <header class="c-header {class}">
+    <div class="o-grid c-header-content">
+      {>"partials/components/logo"
+        class="c-header-content-link"
+      /}
+      {>"partials/components/nav"
+        class="c-header-nav"
+      /}
+    </div>
+    <div class="o-grid c-header-content--mobile js-nav">
+      {>"partials/components/nav"
+        class="c-header-nav"
+        mobile="true"
+      /}
+    </div>
+  </header>

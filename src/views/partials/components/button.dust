@@ -1,0 +1,5 @@
+<a href="{urlbase}{url}">
+  <button type="button" class="o-button {?dark}o-button--dark{/dark}{class}">
+    {text}
+  </button>
+</a>

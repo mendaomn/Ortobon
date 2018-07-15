@@ -1,0 +1,22 @@
+{>"partials/header"
+  title=title
+  styles=inlines.css
+  preloads=asyncStyles
+/}
+
+{>"partials/components/masthead-prodotti"
+/}
+
+<div class="o-background-gray c-prodotti__list-and-filters">
+  {>"partials/components/prodotti-filters"
+  /}
+  {>"partials/components/prodotti-list"
+  /}
+</div>
+
+{>"partials/footer"
+  inline=inlines.js
+  scripts=scripts
+  preloads=preloads
+  cms=inlines.cms
+/}

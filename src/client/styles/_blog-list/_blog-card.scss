@@ -1,0 +1,43 @@
+// Vars
+$blog-margin:          25px;
+$blog-spacing:         10px;
+$blog-tag-spacing:     5px;
+
+.c-blog-card {
+  display: block;
+  margin-bottom: $blog-margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-blog-card__name {
+  font-size: $_fs-normal;
+  font-weight: bold;
+}
+
+.c-blog-card__date {
+  margin-top: $blog-spacing;
+  color: $_color-brown;
+  font-size: $_fs-small;
+  font-weight: bold;
+}
+
+.c-blog-card__intro {
+  margin-top: $blog-spacing;
+}
+
+.c-blog-card__tags {
+  @include _listreset;
+
+  margin-top: $blog-spacing;
+
+  .o-tag {
+    margin-left: $blog-tag-spacing;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

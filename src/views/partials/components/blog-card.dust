@@ -1,0 +1,16 @@
+<a class="o-card c-blog-card" href="/blog/{_id}">
+  <div class="c-blog-card__name">{name}</div>
+  <div class="c-blog-card__date">{date}</div>
+  {>"partials/components/text-block"
+    text=intro
+    class="c-blog-card__intro"
+  /}
+  <ul class="c-blog-card__tags">
+    {?isRecipe}
+      <li class="o-tag">Ricetta</li>
+    {/isRecipe}
+    {#tags}
+      <li class="o-tag">{.}</li>
+    {/tags}
+  </ul>
+</a>

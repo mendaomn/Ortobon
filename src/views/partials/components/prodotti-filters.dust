@@ -1,0 +1,21 @@
+<section class="c-prodotti-filters">
+  {>"partials/components/text-block"
+    text="Filtra per categoria"
+    class="c-prodotti-text-block"
+  /}
+
+  {>"partials/components/checkbox"
+    text="Tutto"
+    checked="true"
+    radiogroup="prodotti-filter"
+    dataType="all"
+  /}
+
+  {#categories}
+    {>"partials/components/checkbox"
+      text="{name}"
+      radiogroup="prodotti-filter"
+      dataType="{_id}"
+    /}
+  {/categories}
+</section>

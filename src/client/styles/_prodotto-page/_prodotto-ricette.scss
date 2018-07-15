@@ -1,0 +1,19 @@
+// Spacing
+$prod-ricette-padding-bottom: 25px;
+$prod-ricette-title-margin-top: 30px;
+$prod-ricette-title-margin-bottom: 15px;
+
+
+.c-prodotto-ricette {
+  @include _sidepadding;
+
+  overflow: auto;
+  padding-bottom: $prod-ricette-padding-bottom;
+  height: 100%;
+  background-color: $_color-lightgrey;
+
+  .o-text-block-title {
+    margin-top: $prod-ricette-title-margin-top;
+    margin-bottom: $prod-ricette-title-margin-bottom;
+  }
+}

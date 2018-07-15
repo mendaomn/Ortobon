@@ -1,0 +1,15 @@
+<div class="o-card c-prodotto-ricetta">
+  <div class="c-pr-ricetta__info-wrapper">
+    <div class="c-pr-ricetta__name">{name}</div>
+    {>"partials/components/text-block"
+      text=intro
+      class="c-pr-ricetta__intro"
+    /}
+    <ul class="c-pr-ricetta__tags">
+      {#tags}
+        <li class="o-tag">{.}</li>
+      {/tags}
+    </ul>
+    <a class="c-pr-ricetta__link" href="/blog/{_id}">Leggi la ricetta</a>
+  </div>
+</div>

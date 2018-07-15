@@ -1,0 +1,31 @@
+<section class="c-prodotti-list__container">
+  {>"partials/components/text-block"
+  text="Clicca sul prodotto per maggiori informazioni"
+  class="c-prodotti-text-block"
+  /}
+
+  <div class="c-prodotti-list js-prodotti-list">
+    <!-- TEMPLATE HANDLED VIA JS -->
+  </div>
+</section>
+<script>
+  window.productsList = [
+    {#content}
+      {  
+        id: "{id}",
+        shopifyID: "{shopifyID}",
+        slug: "{slug}",
+        name: "{name}",
+        type: "{type}",
+        image: "{image.secure_url}",
+        offer: "{offer}",
+        offerlabel: "{offerlabel}",
+        price: "{price}",
+        pricelabel: "{pricelabel}",
+        bio: "{bio}",
+        prodPropria: "{prodPropria}",
+        active: "{active}"
+      },
+    {/content}
+  ]
+</script>

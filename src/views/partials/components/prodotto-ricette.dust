@@ -1,0 +1,9 @@
+<section class="c-prodotto-ricette">
+  {>"partials/components/text-block-title"
+    text="Ricette"
+  /}
+  {#content.recipes}
+    {>"partials/components/prodotto-ricetta-card"
+    /}
+  {/content.recipes}
+</section>

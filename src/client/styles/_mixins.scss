@@ -1,0 +1,59 @@
+// Resets
+
+@mixin _listreset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin _linkreset {
+  color: currentColor;
+  text-decoration: none;
+}
+
+@mixin _clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// Grid related
+
+@mixin _sidepadding {
+  padding-left: $grid-margin-side;
+  padding-right: $grid-margin-side;
+}
+
+// Transitions
+
+@mixin _fasttransition($property) {
+  transition: $property 0.3s ease-in-out;
+}
+
+// Overlay
+
+@mixin _overlay($color, $direction) {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient($direction, rgba($color, 0.85) 50%, rgba(0,0,0,0));
+
+    @media (max-width: $_bp-m) {
+      background-color: rgba($color, 0.85);
+      background-image: none;
+    }
+
+  }
+
+  & > * {
+    position: relative;
+  }
+}

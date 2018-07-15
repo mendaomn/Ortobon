@@ -1,0 +1,84 @@
+    <footer class="o-strip o-strip--both c-footer">
+      <div class="o-strip__left">
+        {>"partials/components/title"
+          class="o-strip__headline-title"
+          small="true"
+          text="{footer.addresstitle}"
+        /}
+        <div class="c-footer__map"></div>
+        {>"partials/components/text-block"
+          text="{footer.addresstext}"
+        /}
+      </div>
+      <div class="o-strip__right">
+        {>"partials/components/title"
+          class="o-strip__headline-title"
+          small="true"
+          text="{footer.contactstitle}"
+        /}
+        <ul class="c-footer__contacts-list has-border">
+          <li class="c-footer__contacts-list-item">
+            <a class="c-footer__contacts-link" href="tel:{footer.phone}">
+              {>"partials/components/icon-phone"
+                class="c-footer__contacts-icon"
+              /}
+              <span class="c-footer__contacts-label">{footer.phone}</span>
+            </a>
+          </li>
+          <li class="c-footer__contacts-list-item">
+            <a class="c-footer__contacts-link" href="mailto:{footer.email}">
+              {>"partials/components/icon-email"
+                class="c-footer__contacts-icon"
+              /}
+              <span class="c-footer__contacts-label">{footer.email}</span>
+            </a>
+          </li>
+        </ul>
+        {>"partials/components/title"
+          class="o-strip__headline-title"
+          small="true"
+          text="{footer.socialtitle}"
+        /}
+        <ul class="c-footer__contacts-list">
+          {# footer.facebook}
+          <li class="c-footer__contacts-list-item">
+            <a class="c-footer__contacts-link" href="{footer.facebook}">
+              {>"partials/components/icon-facebook"
+                class="c-footer__contacts-icon"
+              /}
+              <span class="c-footer__contacts-label">Facebook</span>
+            </a>
+          </li>
+          {/ footer.facebook}
+          {# footer.twitter}
+          <li class="c-footer__contacts-list-item">
+            <a class="c-footer__contacts-link" href="{footer.twitter}">
+              {>"partials/components/icon-twitter"
+                class="c-footer__contacts-icon"
+              /}
+              <span class="c-footer__contacts-label">Twitter</span>
+            </a>
+          </li>
+          {/ footer.twitter}
+        </ul>
+    </footer>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script>
+      {inline|s}
+      {>"partials/loadCSS"/}
+    </script>
+    {#scripts}
+      <script defer src="{.}"></script>
+    {/scripts}
+
+    <script>
+      {#preloads}
+        loadCSS("{path}");
+      {/preloads}
+    </script>
+    <script>
+      {cms|s}
+    </script>
+  </body>
+</html>

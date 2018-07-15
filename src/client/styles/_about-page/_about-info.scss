@@ -1,0 +1,28 @@
+// Spacing
+$about-info-padding-bottom: 150px;
+$about-info-padding-bottom-s: 50px;
+$about-info-title-margin-top: 50px;
+$about-info-title-margin-bottom: 15px;
+
+.c-about-info {
+  @include _sidepadding;
+
+  padding-bottom: $about-info-padding-bottom;
+
+  .o-text-block-title {
+    margin-top: $about-info-title-margin-top;
+    margin-bottom: $about-info-title-margin-bottom;
+  }
+
+  .o-text-block a {
+    color: $_color-brown;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $_bp-m) {
+  .c-about-info {
+    padding-bottom: $about-info-padding-bottom-s;
+  }
+}

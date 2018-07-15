@@ -1,0 +1,18 @@
+<section class="o-strip c-prodotti-strip">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text="{content.productstitle}"
+    /}
+    {>"partials/components/text-block"
+      class="o-strip__headline-lead"
+      text="{content.productstext|s}"
+    /}
+    {>"partials/components/button"
+      url="/prodotti"
+      class="o-strip__headline-cta"
+      text="{content.productscta}"
+    /}
+  </div>
+</section>

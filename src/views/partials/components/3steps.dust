@@ -1,0 +1,37 @@
+<section class="o-strip o-strip--center c-3steps">
+  <div class="o-grid">
+    <div class="o-strip__headline">
+      {>"partials/components/title"
+        class="o-strip__headline-title"
+        large="true"
+        text="{content.stepstitle1}"
+      /}
+    </div>
+
+    <div class="c-3steps__cards">
+      {>"partials/components/3steps-card"
+        number="1"
+        text="{content.step1|s}"
+        image="static/images/optimized/plant.svg"
+      /}
+      {>"partials/components/3steps-card"
+        number="2"
+        text="{content.step2|s}"
+        image="static/images/optimized/call.svg"
+      /}
+      {>"partials/components/3steps-card"
+        number="3"
+        text="{content.step3|s}"
+        image="static/images/optimized/ship-home.svg"
+      /}
+    </div>
+
+    <div class="o-strip__headline">
+      {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text="{content.stepstitle2}"
+      /}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="c-about-info">
+  {>"partials/components/about-info-block"
+    blockclass="alternate"
+    blocktitle=content.section1.title
+    blockimage=content.section1.image.secure_url
+    blocktext=content.section1.text
+  /}
+
+  {>"partials/components/about-info-block"
+    blocktitle=content.section2.title
+    blockimage=content.section2.image.secure_url
+    blocktext=content.section2.text
+  /}
+
+  {>"partials/components/about-info-block"
+    blockclass="alternate"
+    blocktitle=content.section3.title
+    blockimage=content.section3.image.secure_url
+    blocktext=content.section3.text
+  /}
+</section>

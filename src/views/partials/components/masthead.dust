@@ -1,0 +1,14 @@
+<section class="o-strip o-strip--right c-masthead">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text="{content.title}"
+    /}
+    {>"partials/components/button"
+      url="/prodotti"
+      class="o-strip__headline-cta"
+      text="{content.cta}"
+    /}
+  </div>
+</section>

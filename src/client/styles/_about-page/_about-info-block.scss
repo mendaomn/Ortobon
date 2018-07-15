@@ -1,0 +1,51 @@
+// Spacing
+$about-ib-gutter: 25px;
+
+.c-about-info-block__content {
+  display: flex;
+
+  .o-text-block {
+    flex: 1;
+    margin-left: $about-ib-gutter;
+  }
+}
+
+.alternate .c-about-info-block__content {
+  .o-text-block {
+    order: -1;
+    margin-left: 0;
+    margin-right: $about-ib-gutter;
+  }
+}
+
+.c-about-info-block__img {
+  flex: 1;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+}
+
+@media (max-width: $_bp-m) {
+  .c-about-info-block__content {
+    flex-direction: column;
+
+    .o-text-block {
+      margin-left: 0;
+      margin-top: $about-ib-gutter;
+    }
+  }
+
+  .alternate .c-about-info-block__content {
+    .o-text-block {
+      order: unset;
+    }
+  }
+
+  .c-about-info-block__img {
+    width: 100%;
+    min-height: 350px;
+    height: 350px;
+  }
+}

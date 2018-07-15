@@ -1,0 +1,16 @@
+// Vars
+$input-padding: 5px;
+
+.o-input {
+  padding-bottom: $input-padding;
+  background: none;
+  color: $_color-white;
+  font-size: $_fs-normal;
+  border: none;
+  border-bottom: 1px solid $_color-white;
+
+  &.o-input--dark {
+    color: $_color-darkshaft;
+    border-bottom-color: $_color-darkshaft;
+  }
+}

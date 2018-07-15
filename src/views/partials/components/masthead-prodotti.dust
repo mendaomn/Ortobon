@@ -1,0 +1,16 @@
+<section class="o-strip o-strip--right c-masthead-prodotti">
+  <div class="o-grid o-strip__headline">
+    {>"partials/components/title"
+      class="o-strip__headline-title"
+      large="true"
+      text=content.mastheadtitle
+    /}
+
+    <div class="c-masthead-prodotti__form">
+      <input class="o-search js-searchbox" type="search" placeholder="Arance">
+      {>"partials/components/icon-search"
+        class="c-masthead-prodotti__search-icon"
+      /}
+  </div>
+  </div>
+</section>
