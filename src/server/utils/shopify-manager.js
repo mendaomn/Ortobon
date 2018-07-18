@@ -36,14 +36,22 @@ class ShopifyManager {
         product :{
           title: data.name,
           variants: [{
-            option1: "1 kg",
-            price: data.price
+            option1: data.pricelabel || 'Mezzo Kg',
+            price: data.price,
           }],
           images: [{
             src: data.image.secure_url
           }]
         }
       }
+
+      if (data.offer && data.offerlabel) {
+        payload.product.variants.push({
+          option1: data.offerlabel,
+          price: data.offer,
+        })
+      }
+      
 
       if (shouldCreateProduct) {
         const id = await ShopifyManager.createProduct( payload )
@@ -84,7 +92,7 @@ class ShopifyManager {
         collection_id: BUY_BUTTON_COLLECTION_ID
       }
     }
-    console.log(payload)
+    
     return ShopifyManager.post( COLLECTS_URL, payload)
   }
 

@@ -37,12 +37,13 @@ export default class ProductsController {
     const prodottoClassList = `c-prodotto__image ${ product.offer ? 'has-offer' : ''}`;
     const priceClassList = `${ product.offer ? 'c-prodotto__invalid-price-container' : 'c-prodotto__price-container'}`;
     const bioTmpl = `<div class="o-tag">Bio</div>`;
-    // const prodPropriaTmpl = `<div class="o-tag">Prod Propria</div>`;
-    const prodPropriaTmpl = `<img class="c-prodotto__prod-propria-icon" src="/static/images/optimized/prod-propria.png">`;
+    const prodPropriaTmpl = `<div class="o-tag">Dall'orto</div>`;
+    // const prodPropriaTmpl = `<img class="c-prodotto__prod-propria-icon" src="/static/images/optimized/prod-propria.png">`;
     const offerTmpl = product.offer ? `<div class="c-prodotto__price-container">
     <div class="c-prodotto__price-label">${product.offerlabel}</div>
     <div class="c-prodotto__price-value">${product.offer}€</div>
   </div>` : '';
+    const pricePerKgTmpl = `<div class="c-prodotto__price-label">${product.pricePerKg}€ Al Kg</div>`
 
     return `<a class="o-card c-prodotto" href="/prodotti/${product.id}" data-id="${product.id}">
     <div class="${prodottoClassList}"
@@ -52,6 +53,7 @@ export default class ProductsController {
       <div class="c-prodotto__name">
         ${product.name}
       </div>
+      ${product.pricePerKg ? pricePerKgTmpl : ''}
       <div class="c-prodotto__tags">
         ${product.bio ? bioTmpl : ''}
         ${product.prodPropria ? prodPropriaTmpl : ''}
@@ -63,10 +65,10 @@ export default class ProductsController {
   }
 }
 
-/* <div class="c-prodotto__price-and-offer">
+{/* <div class="c-prodotto__price-and-offer">
         <div class="${priceClassList}">
           <div class="c-prodotto__price-label">${product.pricelabel}</div>
           <div class="c-prodotto__price-value">${product.price}€</div>
         </div>
         ${offerTmpl}
-      </div> */
+      </div> */}

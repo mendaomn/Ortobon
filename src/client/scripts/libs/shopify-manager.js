@@ -1,5 +1,12 @@
 import DOMHelpers from './dom-helpers';
 
+const priceTemplate = `<div class="{{data.classes.product.prices}}" data-element="product.prices">
+{{#data.selectedVariant}}
+<span class="{{data.classes.product.price}} {{data.priceClass}}" data-element="product.price"><span class="{{data.classes.product.compareAt}}">{{data.selectedVariant.title}}</span> {{data.selectedVariant.price}}€</span>
+{{#data.selectedVariant.compareAtPrice}}<span class="{{data.classes.product.compareAt}}" data-element="product.compareAt">{{data.formattedCompareAtPrice}}</span>{{/data.selectedVariant.compareAtPrice}}
+{{/data.selectedVariant}}
+</div>`
+
 export class ShopifyManager {
   static initBuyButtons( options ) {
     if (!window.ShopifyBuy || !window.ShopifyBuy.UI) {
@@ -9,7 +16,7 @@ export class ShopifyManager {
     }
 
     const client = ShopifyManager._getShopifyClient();
-    
+
     ShopifyBuy.UI.onReady(client).then(ui => {
       const buttons = document.querySelectorAll('.js-buy-button');
 
@@ -135,6 +142,9 @@ export const Options = {
     "product": {
       "variantId": "all",
       "width": "100%",
+      templates: {
+        price: priceTemplate
+      },
       "contents": {
         "img": false,
         "imgWithCarousel": false,
@@ -165,6 +175,7 @@ export const Options = {
           "color": "black"
         },
         "compareAt": {
+          "text-decoration": "unset",
           "font-size": "16px",
           "color": "black"
         },

@@ -44,13 +44,17 @@ Prodotto.add( {
     type: Types.CloudinaryImage,
     label: "Immagine di copertina del prodotto"
   },
+  pricePerKg: {
+    type: String,
+    label: "Prezzo al kg"
+  },
   price: {
     type: String,
-    label: "Prezzo"
+    label: "Prezzo per unità, solitamente per mezzo kg"
   },
   pricelabel: {
     type:  String,
-    label: "Unità di misura del prezzo, esempio \"Al Kg\""
+    label: "Nome della singola unità, solitamente \"Mezzo Kg\""
   },
   offer: {
     type:  String,

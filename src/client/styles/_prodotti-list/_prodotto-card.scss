@@ -51,7 +51,7 @@ $prodotto-prod-propria-w: 40px;
 
 .c-prodotto__name {
   padding-right: $prodotto-prod-propria-w;
-  min-height: $prodotto-prod-propria-w;
+  /* min-height: $prodotto-prod-propria-w; */
   font-size: $_fs-small;
   font-weight: bold;
 }
@@ -88,6 +88,7 @@ $prodotto-prod-propria-w: 40px;
 }
 
 .c-prodotto__price-label {
+  margin-top: 5px;
   font-size: $_fs-xsmall;
 }
 

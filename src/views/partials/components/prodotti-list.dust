@@ -22,6 +22,7 @@
         offerlabel: "{offerlabel}",
         price: "{price}",
         pricelabel: "{pricelabel}",
+        pricePerKg: "{pricePerKg}",
         bio: "{bio}",
         prodPropria: "{prodPropria}",
         active: "{active}"
