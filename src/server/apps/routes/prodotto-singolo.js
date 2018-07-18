@@ -57,7 +57,7 @@ function singleProductRoute( req, res ) {
         .map( cms.articoli._truncateContent );
 
       pageData.hasNutritions = pageData.cals || pageData.fats || pageData.ports || pageData.carbs || pageData.fibers
-      pageData.hasRecipes = pageData.recipes.length
+      pageData.hasRecipes = pageData.recipes.length > 0
 
       productsOptions.title = `${pageData.name} - Negozio Ortobon`;
       productsOptions.content = pageData;
