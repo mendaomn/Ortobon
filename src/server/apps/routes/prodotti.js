@@ -33,7 +33,7 @@ const productsOptions = {
   navitems,
   scripts: [
     ShopifyManager.SDK_URL,
-    'static/scripts/prodotti.js'
+    '/static/scripts/prodotti.js'
   ],
   inlines,
   preloads
