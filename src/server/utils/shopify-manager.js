@@ -36,8 +36,9 @@ class ShopifyManager {
         product :{
           title: data.name,
           variants: [{
-            option1: data.pricelabel || 'Mezzo Kg',
+            option1: data.pricelabel || '0.5 Kg',
             price: data.price,
+            // weight: data.weight || 0.5
           }],
           images: [{
             src: data.image.secure_url
@@ -49,6 +50,7 @@ class ShopifyManager {
         payload.product.variants.push({
           option1: data.offerlabel,
           price: data.offer,
+          // weight: data.weight || 0.5
         })
       }
       

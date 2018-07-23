@@ -50,11 +50,11 @@ Prodotto.add( {
   },
   price: {
     type: String,
-    label: "Prezzo per unità, solitamente per mezzo kg"
+    label: "Prezzo per unità (es- prezzo al mezzo kg)"
   },
   pricelabel: {
     type:  String,
-    label: "Nome della singola unità, solitamente \"Mezzo Kg\""
+    label: "Nome della singola unità ('0.5 kg' se lasciato vuoto)"
   },
   offer: {
     type:  String,
