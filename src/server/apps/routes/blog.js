@@ -33,10 +33,11 @@ const blogOptions = {
   preloads
 };
 
-// Set "Prodotti" to active
-blogOptions.navitems[ 3 ].active = true;
-
 function blogRoute( req, res ) {
+
+  // Set "Prodotti" to active
+  blogOptions.navitems[ 3 ].active = true;
+
 
   Promise.all( [
       cms.blog.getData(),

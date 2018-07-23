@@ -16,8 +16,8 @@
 {>"partials/components/blog-strip"
 /}
 
-{>"partials/components/ultimi-articoli"
-/}
+<!-- {>"partials/components/ultimi-articoli"
+/} -->
 
 {>"partials/footer"
   inline=inlines.js

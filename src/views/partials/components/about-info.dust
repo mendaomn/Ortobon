@@ -12,10 +12,12 @@
     blocktext=content.section2.text
   /}
 
+  {#content.section3.title}
   {>"partials/components/about-info-block"
     blockclass="alternate"
     blocktitle=content.section3.title
     blockimage=content.section3.image.secure_url
     blocktext=content.section3.text
   /}
+  {/content.section3.title}
 </section>

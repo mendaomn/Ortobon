@@ -9,9 +9,10 @@
       class="o-strip__headline-lead"
       text="{content.articlestext|s}"
     /}
-    {>"partials/components/button"
+    <!-- {>"partials/components/button"
+      url="/blog"
       class="o-button--dark o-strip__headline-cta"
       text="{content.articlescta}"
-    /}
+    /} -->
   </div>
 </section>

@@ -35,11 +35,11 @@ const articoloOptions = {
   preloads
 };
 
-// Set "Prodotti" to active
-articoloOptions.navitems[ 3 ].active = true;
-
 function articleRoute( req, res ) {
   const article_id = req.params.id;
+
+  // Set "Prodotti" to active
+  articoloOptions.navitems[ 3 ].active = true;
 
   Promise.all( [
       cms.articoli.getDataById( article_id ),
