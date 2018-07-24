@@ -70,7 +70,7 @@ Prodotto.add( {
     label: "Descrizione"
   },
   meta_description: {
-    type: Types.Textarea,
+    type: String,
     height: 50,
     label: "Descrizione, per i motori di ricerca"
   },

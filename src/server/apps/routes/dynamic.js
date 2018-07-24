@@ -8,7 +8,7 @@ const viewPath = path.join( __dirname, '..', '..', '..', 'views' );
 
 const pluginsPath = path.join( __dirname, '..', '..', 'utils' );
 
-dynamic.engine( 'dust', adaro.dust() );
+dynamic.engine( 'dust', adaro.dust({helpers: ['dustjs-helpers']}) );
 dynamic.set( 'view engine', 'dust' );
 dynamic.set( 'views', viewPath );
 
@@ -30,6 +30,8 @@ dynamic.get( '/blog/:id', require( './articolo.js' ) );
 dynamic.get( '/about', require( './about.js' ) );
 dynamic.post( '/newcomment', require( './newcomment.js' ) );
 dynamic.post( '/deletecomment', require( './deletecomment.js' ) );
+
+dynamic.get( '/sitemap.xml/?', require('./sitemap.js' ) );
 
 console.log( '[App: Dynamic] initialized.' );
 

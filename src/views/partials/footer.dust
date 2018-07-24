@@ -61,6 +61,18 @@
           </li>
           {/ footer.twitter}
         </ul>
+        <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Ortobon",
+            "url": "http://www.orto-bon.it  ",
+            "sameAs": [
+              {# footer.facebook}"{footer.facebook}"{/ footer.facebook}
+              {# footer.twitter},"{footer.twitter}"{/ footer.twitter}
+            ]
+          }
+        </script>
     </footer>
 
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>

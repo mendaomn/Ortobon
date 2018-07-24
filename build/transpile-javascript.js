@@ -10,7 +10,6 @@ const entries = [ {
   inPath: 'client/scripts/prodotti.js',
   outPath: 'client/scripts/prodotti.js'
 }, {
-}, {
   inPath: 'client/scripts/prodotto-singolo.js',
   outPath: 'client/scripts/prodotto-singolo.js'
 }, {

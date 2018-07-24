@@ -11,4 +11,19 @@
   {/content.hasRecipes}
 </div>
 
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "{content.name}",
+    "image": ["{content.image.secure_url}"],
+    "description": "{content.meta_description}",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "{content.price}"
+    }
+  }
+</script>
+
 {>"partials/footer" inline=inlines.js scripts=scripts preloads=preloads cms=inlines.cms /}

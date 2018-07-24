@@ -30,3 +30,23 @@
     {/content}
   ]
 </script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {#content}
+      {
+        "@type": "ListItem",
+        "position": {$idx},
+        "item": {
+          "@type": "Product",
+          "url": "http:/www.orto-bon.it/prodotti#{id}",
+          "name": "{name}",
+          "image": "{image.secure_url}"
+        }
+      }{@sep},{/sep}
+      {/content}
+    ]
+  }
+  </script>

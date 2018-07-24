@@ -1,5 +1,6 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
+const { JSDOM } = require('jsdom');
 
 const viewPath = path.join( __dirname, '..', '..', '..', 'views' );
 
@@ -59,6 +60,10 @@ function singleProductRoute( req, res ) {
       pageData.hasNutritions = pageData.cals || pageData.fats || pageData.ports || pageData.carbs || pageData.fibers
       pageData.hasRecipes = pageData.recipes.length > 0
 
+      const inferredMetaDescription = getMetaFromDescription(pageData.description)
+
+      pageData.meta_description = pageData.meta_description || inferredMetaDescription
+
       productsOptions.title = `${pageData.name} - Negozio Ortobon`;
       productsOptions.content = pageData;
       productsOptions.footer = footerData;
@@ -66,6 +71,20 @@ function singleProductRoute( req, res ) {
       res.status( 200 ).render( 'prodotto-singolo', productsOptions );
     } );
 
+}
+
+function getMetaFromDescription(description) {
+  if (!description) return
+
+  const dom = new JSDOM(`<!DOCTYPE html>${description}`)
+  const {textContent} = dom.window.document.querySelector("html")
+
+  const shortDescription = textContent.substr(0, 160)
+  const lastSentenceIndex = shortDescription.lastIndexOf('.')
+  
+  return lastSentenceIndex !== -1 ? 
+          shortDescription.substr(0, lastSentenceIndex) :
+          shortDescription
 }
 
 module.exports = singleProductRoute;
