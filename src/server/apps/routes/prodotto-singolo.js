@@ -1,6 +1,7 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
 const { JSDOM } = require('jsdom');
+const cloudinary = require('cloudinary');
 
 const viewPath = path.join( __dirname, '..', '..', '..', 'views' );
 
@@ -64,6 +65,8 @@ function singleProductRoute( req, res ) {
 
       pageData.meta_description = pageData.meta_description || inferredMetaDescription
 
+      pageData.image = resizeImage( pageData.image )
+
       productsOptions.title = `${pageData.name} - Negozio Ortobon`;
       productsOptions.content = pageData;
       productsOptions.footer = footerData;
@@ -88,3 +91,16 @@ function getMetaFromDescription(description) {
 }
 
 module.exports = singleProductRoute;
+
+function resizeImage( image ) {
+  const { public_id } = image
+  const url = cloudinary.url(public_id, {
+    secure: true,
+    transformation: [
+      { width: 1920, crop: 'fill', quality: 'auto', fetch_format: 'auto' }
+    ]
+  })
+
+  image.secure_url = url
+  return image
+}

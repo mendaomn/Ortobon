@@ -34,7 +34,8 @@
 
 // Overlay
 
-@mixin _overlay($color, $direction) {
+$overlay-alpha-default: 0.85 !default;
+@mixin _overlay($color, $direction, $overlay-alpha: $overlay-alpha-default) {
   position: relative;
 
   &:before {
@@ -44,10 +45,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient($direction, rgba($color, 0.85) 50%, rgba(0,0,0,0));
+    background-image: linear-gradient($direction, rgba($color, $overlay-alpha) 50%, rgba(0,0,0,0));
 
     @media (max-width: $_bp-m) {
-      background-color: rgba($color, 0.85);
+      background-color: rgba($color, $overlay-alpha);
       background-image: none;
     }
 

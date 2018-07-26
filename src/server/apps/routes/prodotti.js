@@ -1,5 +1,6 @@
 const path = require( 'path' );
 const fs = require( 'fs' );
+const cloudinary = require('cloudinary');
 
 const viewPath = path.join( __dirname, '..', '..', '..', 'views' );
 
@@ -55,9 +56,11 @@ function productsRoute( req, res ) {
 
       productsOptions.inlines.cms = `window.initialState={ products: ${JSON.stringify(pageData)}}`
 
-      pageData.mastheadtitle = prodottiData.mastheadtitle;
+      productsOptions.mastheadtitle = prodottiData.mastheadtitle;
 
-      productsOptions.content = pageData.sort( (a, b) => a.name > b.name ? 1 : -1 );
+      productsOptions.content = pageData
+        .sort( (a, b) => a.name > b.name ? 1 : -1 )
+        .map( resizeImage );
       productsOptions.categories = categories;
       productsOptions.footer = footerData;
 
@@ -67,3 +70,16 @@ function productsRoute( req, res ) {
 }
 
 module.exports = productsRoute;
+
+function resizeImage( item, i ) {
+  const { public_id } = item.image
+  const url = cloudinary.url(public_id, {
+    secure: true,
+    transformation: [
+      { width: 320, crop: 'thumb', quality: 'auto', fetch_format: 'auto' }
+    ]
+  })
+
+  item.image.secure_url = url
+  return item
+}

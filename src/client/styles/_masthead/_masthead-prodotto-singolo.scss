@@ -4,7 +4,7 @@ $prodotto-strip-height: 300px;
 $prodotto-strip-padding: 100px;
 
 .c-masthead-prodotto {
-  @include _overlay(black, to right);
+  @include _overlay(black, to right, 0.5);
 
   align-items: flex-end;
   padding-top: $prodotto-strip-padding;

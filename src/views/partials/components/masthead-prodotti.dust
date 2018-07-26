@@ -3,7 +3,7 @@
     {>"partials/components/title"
       class="o-strip__headline-title"
       large="true"
-      text=content.mastheadtitle
+      text=mastheadtitle
     /}
 
     <div class="c-masthead-prodotti__form">
