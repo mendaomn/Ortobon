@@ -59,7 +59,7 @@ files.forEach(file => {
       }
 
       const output = new CleanCSS().minify(result.css);
-      fs.writeFile(file.out, output.styles, 'utf-8');
+      fs.writeFile(file.out, output.styles, 'utf-8', _ => {});
     });
   });
 });

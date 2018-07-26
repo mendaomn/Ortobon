@@ -9,4 +9,7 @@ imagemin(['src/client/images/raw/**/*.{jpg,jpeg,png,svg}'], 'src/client/images/o
   ]
 }).then(files => {
   console.log(files.map(x => x.path))
+})
+.catch(err => {
+  console.error(err)
 });

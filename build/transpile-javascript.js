@@ -36,5 +36,8 @@ entries.forEach( entry => {
       format: 'iife',
       dest: `dist/${entry.outPath}`
     } );
-  } );
+  } )
+  .catch( err => {
+    console.error(err);
+  })
 } );
