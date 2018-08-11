@@ -4,11 +4,20 @@ const path = require( 'path' );
 const adaro = require( 'adaro' );
 const fs = require( 'fs' );
 
+const HashHelper = require('../../utils/hash')
+
 const viewPath = path.join( __dirname, '..', '..', '..', 'views' );
 
 const pluginsPath = path.join( __dirname, '..', '..', 'utils' );
 
-dynamic.engine( 'dust', adaro.dust({helpers: ['dustjs-helpers']}) );
+const dustOptions = {
+  helpers: [
+    'dustjs-helpers',
+    HashHelper.init
+  ]
+}
+
+dynamic.engine( 'dust', adaro.dust(dustOptions) );
 dynamic.set( 'view engine', 'dust' );
 dynamic.set( 'views', viewPath );
 

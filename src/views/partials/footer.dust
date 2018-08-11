@@ -81,12 +81,12 @@
       {>"partials/loadCSS"/}
     </script>
     {#scripts}
-      <script defer src="{.}"></script>
+      <script defer src="{@hash path=.}{/hash}"></script>
     {/scripts}
 
     <script>
       {#preloads}
-        loadCSS("{path}");
+        loadCSS("{@hash path=path}{/hash}");
       {/preloads}
     </script>
     <script>

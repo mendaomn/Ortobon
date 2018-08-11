@@ -82,6 +82,7 @@
     "keystone": "^4.0.0-beta.1",
     "newrelic": "^1.40.0",
     "shopify-buy": "^1.4.0",
+    "static-expiry": "0.0.11",
     "unfetch": "^2.1.2"
   }
 }

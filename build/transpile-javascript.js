@@ -15,7 +15,10 @@ const entries = [ {
 }, {
   inPath: 'client/scripts/article.js',
   outPath: 'client/scripts/article.js'
-} ];
+}/* , {
+  inPath: 'client/scripts/buy-button-storefront.js',
+  outPath: 'client/scripts/buy-button-storefront.js'
+} */ ];
 
 let cache;
 entries.forEach( entry => {

@@ -15,7 +15,7 @@ const inlines = {
 };
 
 const preloads = [ {
-  path: '/static/styles/article.later.css',
+  path: '/styles/article.later.css',
   type: 'style'
 } ];
 
@@ -29,7 +29,7 @@ const articoloOptions = {
   version,
   navitems,
   scripts: [
-    '/static/scripts/article.js'
+    '/scripts/article.js'
   ],
   inlines,
   preloads

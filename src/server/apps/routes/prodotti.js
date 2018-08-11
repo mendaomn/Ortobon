@@ -17,7 +17,7 @@ const inlines = {
 };
 
 const preloads = [ {
-  path: '/static/styles/prodotti.later.css',
+  path: '/styles/prodotti.later.css',
   type: 'style'
 } ];
 
@@ -34,7 +34,8 @@ const productsOptions = {
   navitems,
   scripts: [
     ShopifyManager.SDK_URL,
-    '/static/scripts/prodotti.js'
+    // '/scripts/buy-button-storefront.js',
+    '/scripts/prodotti.js'
   ],
   inlines,
   preloads

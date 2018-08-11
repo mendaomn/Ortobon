@@ -15,7 +15,7 @@ const inlines = {
 };
 
 const preloads = [ {
-  path: '/static/styles/about.later.css',
+  path: '/styles/about.later.css',
   type: 'style'
 } ];
 

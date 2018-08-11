@@ -18,7 +18,7 @@ const inlines = {
 };
 
 const preloads = [ {
-  path: '/static/styles/prodotto.later.css',
+  path: '/styles/prodotto.later.css',
   type: 'style'
 } ];
 
@@ -36,7 +36,7 @@ const productsOptions = {
   preloads,
   scripts: [
     ShopifyManager.SDK_URL,
-    '/static/scripts/prodotto-singolo.js'
+    '/scripts/prodotto-singolo.js'
   ],
 };
 

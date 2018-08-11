@@ -10,12 +10,13 @@
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
 
   {#preloads}
-    <link rel="preload" href="{path}" as="{type}">
+    <link rel="preload" href="{@hash path=path}{/hash}" as="{type}">
   {/preloads}
 
   {#css}
     <link rel="stylesheet" href="{@hash path=.}{/hash}">
   {/css}
+  
   <style>
     {styles|s}
   </style>
