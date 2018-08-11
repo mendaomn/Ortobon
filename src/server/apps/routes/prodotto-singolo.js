@@ -64,6 +64,7 @@ function singleProductRoute( req, res ) {
       const inferredMetaDescription = getMetaFromDescription(pageData.description)
 
       pageData.meta_description = pageData.meta_description || inferredMetaDescription
+      pageData.isProduct = true
 
       pageData.image = resizeImage( pageData.image )
 
@@ -97,10 +98,18 @@ function resizeImage( image ) {
   const url = cloudinary.url(public_id, {
     secure: true,
     transformation: [
-      { width: 1920, crop: 'fill', quality: 'auto', fetch_format: 'auto' }
+      { width: 1920, crop: 'fill', quality: 'auto', fetch_format: 'auto' },
     ]
   })
 
+  const thumbUrl = cloudinary.url(public_id, {
+    secure: true,
+    transformation: [
+      { width: 1200, crop: 'fill', quality: 'auto', fetch_format: 'auto' },
+    ]
+  })
+
+  image.thumb_url = thumbUrl
   image.secure_url = url
   return image
 }

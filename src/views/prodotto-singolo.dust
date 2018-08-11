@@ -1,4 +1,5 @@
-{>"partials/header" title=title styles=inlines.css preloads=asyncStyles /} {>"partials/components/masthead-prodotto-singolo" /}
+{>"partials/header" title=title styles=inlines.css preloads=asyncStyles /}
+{>"partials/components/masthead-prodotto-singolo" /}
 
 <div class="c-prodotto__info-and-ricette">
 	<div class="c-prodotto__info-container">
@@ -16,7 +17,7 @@
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": "{content.name}",
-    "image": ["{content.image.secure_url}"],
+    "image": ["{content.image.thumb_url}"],
     "description": "{content.meta_description}",
     "offers": {
       "@type": "Offer",

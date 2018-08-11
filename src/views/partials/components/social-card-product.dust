@@ -1,0 +1,27 @@
+<!-- https://moz.com/blog/meta-data-templates-123 -->
+
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Product">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="{content.name}">
+<meta itemprop="description" content="{content.meta_description}">
+<meta itemprop="image" content="{content.image.thumb_url}">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="product">
+<meta name="twitter:title" content="{content.name}">
+<meta name="twitter:description" content="{content.meta_description}">
+<meta name="twitter:image" content="{content.image.thumb_url}">
+<meta name="twitter:data1" content="{content.price}">
+<meta name="twitter:label1" content="Price">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{content.name}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{path}" />
+<meta property="og:image" content="{content.image.thumb_url}" />
+<meta property="og:description" content="{content.meta_description}" />
+<meta property="og:site_name" content="Ortobon" />
+<meta property="og:price:amount" content="{content.price}" />
+<meta property="og:price:currency" content="EUR" />
