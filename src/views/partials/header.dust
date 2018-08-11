@@ -9,9 +9,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico"/>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
 
-  {#isProduct}
+  {#content.isProduct}
     {>"partials/components/social-card-product" /}
-  {/isProduct}
+  {/content.isProduct}
 
   {#preloads}
     <link rel="preload" href="{@hash path=path}{/hash}" as="{type}">
