@@ -15,11 +15,9 @@ function sitemapRoute( req, res ) {
 
   cms.prodotti.getData().then( data => {
     data.forEach( p => {
-      if (p.active) {
-        products.push({
-          url: `${DOMAIN}/prodotti/${p.id}`
-        })
-      }
+      products.push({
+        url: `${DOMAIN}/prodotti/${p.id}`
+      })
     })
 
     res.locals.pages = pages
