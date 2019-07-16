@@ -1,4 +1,4 @@
-<a class="o-card c-blog-card" href="/blog/{_id}">
+<a class="o-card c-blog-card" href="/blog/{_id}" title="{name}">
   <div class="c-blog-card__name">{name}</div>
   <div class="c-blog-card__date">{date}</div>
   {>"partials/components/text-block"

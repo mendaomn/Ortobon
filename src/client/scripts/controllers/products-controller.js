@@ -45,7 +45,7 @@ export default class ProductsController {
   </div>` : '';
     const pricePerKgTmpl = `<div class="c-prodotto__price-label">${product.pricePerKg}€ Al Kg</div>`
 
-    return `<a class="o-card c-prodotto" href="/prodotti/${product.id}" id="${product.id}" data-id="${product.id}">
+    return `<a class="o-card c-prodotto" href="/prodotti/${product.id}" id="${product.id}" data-id="${product.id}" title="${product.name}">
     <div class="${prodottoClassList}"
         style="background-image: url(${product.image})">
     </div>

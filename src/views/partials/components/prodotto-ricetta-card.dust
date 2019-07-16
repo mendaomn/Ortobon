@@ -10,6 +10,6 @@
         <li class="o-tag">{.}</li>
       {/tags}
     </ul>
-    <a class="c-pr-ricetta__link" href="/blog/{_id}">Leggi la ricetta</a>
+    <a class="c-pr-ricetta__link" href="/blog/{_id}" title="{name}">Leggi la ricetta</a>
   </div>
 </div>

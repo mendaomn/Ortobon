@@ -18,7 +18,7 @@
         /}
         <ul class="c-footer__contacts-list has-border">
           <li class="c-footer__contacts-list-item">
-            <a class="c-footer__contacts-link" href="tel:{footer.phone}">
+            <a class="c-footer__contacts-link" href="tel:{footer.phone}" title="Numero di telefono">
               {>"partials/components/icon-phone"
                 class="c-footer__contacts-icon"
               /}
@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="c-footer__contacts-list-item">
-            <a class="c-footer__contacts-link" href="mailto:{footer.email}">
+            <a class="c-footer__contacts-link" href="mailto:{footer.email}" title="Indirizzo Email">
               {>"partials/components/icon-email"
                 class="c-footer__contacts-icon"
               /}
@@ -42,7 +42,7 @@
         <ul class="c-footer__contacts-list">
           {# footer.facebook}
           <li class="c-footer__contacts-list-item">
-            <a class="c-footer__contacts-link" href="{footer.facebook}">
+            <a class="c-footer__contacts-link" href="{footer.facebook}" title="Pagina Facebook">
               {>"partials/components/icon-facebook"
                 class="c-footer__contacts-icon"
               /}
@@ -52,7 +52,7 @@
           {/ footer.facebook}
           {# footer.twitter}
           <li class="c-footer__contacts-list-item">
-            <a class="c-footer__contacts-link" href="{footer.twitter}">
+            <a class="c-footer__contacts-link" href="{footer.twitter}" title="Profilo Twitter">
               {>"partials/components/icon-twitter"
                 class="c-footer__contacts-icon"
               /}

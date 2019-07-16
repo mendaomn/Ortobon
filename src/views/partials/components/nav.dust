@@ -18,7 +18,7 @@
   <ul class="c-nav-mobile {class}">
     {#navitems}
     <li class="c-nav__item {?active}active{/active}">
-      <a class="c-nav__item-link" href="{path}">{text}</a>
+      <a class="c-nav__item-link" href="{path}" title="{text}">{text}</a>
     </li>
     {/navitems}
   </ul>
@@ -28,7 +28,7 @@
   <ul class="c-nav {class}">
     {#navitems}
       <li class="c-nav__item {?active}active{/active}">
-        <a class="c-nav__item-link" href="{path}">{text}</a>
+        <a class="c-nav__item-link" href="{path}" title="{text}">{text}</a>
       </li>
     {/navitems}
   </ul>
