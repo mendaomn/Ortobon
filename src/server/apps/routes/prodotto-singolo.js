@@ -68,7 +68,7 @@ function singleProductRoute( req, res ) {
 
       pageData.image = resizeImage( pageData.image )
 
-      productsOptions.title = `${pageData.name} - Negozio Ortobon`;
+      productsOptions.title = `${pageData.name} - Acquista Online - Ortobon`;
       productsOptions.content = pageData;
       productsOptions.footer = footerData;
 
