@@ -3,6 +3,7 @@
     {>"partials/components/title"
       class="o-strip__headline-title"
       large="true"
+      h1="true"
       text=content.mastheadtitle
     /}
   </div>

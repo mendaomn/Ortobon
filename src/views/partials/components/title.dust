@@ -1,3 +1,3 @@
-<h2 class="o-title {?large}o-title--large{/large} {?small}o-title--small{/small} {class}">
+<{?h1}h1{:else}h2{/h1} class="o-title {?large}o-title--large{/large} {?small}o-title--small{/small} {class}">
   {text|s}
-</h2>
+</{?h1}h1{:else}h2{/h1}>

@@ -41,6 +41,7 @@ dynamic.post( '/newcomment', require( './newcomment.js' ) );
 dynamic.post( '/deletecomment', require( './deletecomment.js' ) );
 
 dynamic.get( '/sitemap.xml/?', require('./sitemap.js' ) );
+dynamic.get( '/robots.txt/?', require('./robots-txt.js' ) );
 
 console.log( '[App: Dynamic] initialized.' );
 
