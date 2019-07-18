@@ -17,7 +17,7 @@
       {/content.offer}
     </div> -->
 
-    <div class="c-masthead-prodotto__buy-button js-buy-button" data-shopifyID={content.shopifyID}></div>
+    <div class="c-masthead-prodotto__buy-button {?content.active}js-buy-button{/content.active}" data-shopifyID={content.shopifyID}></div>
 
   </div>
 </section>
