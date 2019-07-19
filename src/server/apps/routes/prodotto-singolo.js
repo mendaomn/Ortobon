@@ -61,9 +61,12 @@ function singleProductRoute( req, res ) {
       pageData.hasNutritions = pageData.cals || pageData.fats || pageData.ports || pageData.carbs || pageData.fibers
       pageData.hasRecipes = pageData.recipes.length > 0
 
-      const inferredMetaDescription = getMetaFromDescription(pageData.description)
+      // const inferredMetaDescription = getMetaFromDescription(pageData.description)
 
-      pageData.meta_description = pageData.meta_description || inferredMetaDescription
+      const price = pageData.pricePerKg ? `€${pageData.pricePerKg} Al Kg` : `€${pageData.price}`
+      const generatedMetaDescription = `${pageData.name} - Acquista Online a soli ${price}`
+
+      pageData.meta_description = pageData.meta_description || generatedMetaDescription
       pageData.isProduct = true
 
       pageData.image = resizeImage( pageData.image )
@@ -77,19 +80,19 @@ function singleProductRoute( req, res ) {
 
 }
 
-function getMetaFromDescription(description) {
-  if (!description) return
+// function getMetaFromDescription(description) {
+//   if (!description) return
 
-  const dom = new JSDOM(`<!DOCTYPE html>${description}`)
-  const {textContent} = dom.window.document.querySelector("html")
+//   const dom = new JSDOM(`<!DOCTYPE html>${description}`)
+//   const {textContent} = dom.window.document.querySelector("html")
 
-  const shortDescription = textContent.substr(0, 160)
-  const lastSentenceIndex = shortDescription.lastIndexOf('.')
+//   const shortDescription = textContent.substr(0, 160)
+//   const lastSentenceIndex = shortDescription.lastIndexOf('.')
   
-  return lastSentenceIndex !== -1 ? 
-          shortDescription.substr(0, lastSentenceIndex) :
-          shortDescription
-}
+//   return lastSentenceIndex !== -1 ? 
+//           shortDescription.substr(0, lastSentenceIndex) :
+//           shortDescription
+// }
 
 module.exports = singleProductRoute;
 
