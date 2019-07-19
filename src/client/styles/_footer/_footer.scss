@@ -32,6 +32,7 @@ $footer-border-color:           rgba($_color-white, 0.4);
 }
 
 .c-footer__map {
+  display: block;
   margin-bottom: $footer-title-margin;
   height: $footer-map-height;
   width: 100%;

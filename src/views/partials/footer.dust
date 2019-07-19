@@ -5,7 +5,7 @@
           small="true"
           text="{footer.addresstitle}"
         /}
-        <div class="c-footer__map"></div>
+        <a href="https://g.page/ortobon?share" class="c-footer__map"></a>
         {>"partials/components/text-block"
           text="{footer.addresstext}"
         /}
