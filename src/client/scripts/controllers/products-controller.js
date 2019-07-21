@@ -51,7 +51,7 @@ export default class ProductsController {
     </div>
     <div class="c-prodotto__info-wrapper">
       <div class="c-prodotto__name">
-        ${product.name + (product.nameAdditions || '')}
+        ${product.name + ' ' + (product.nameAdditions || '')}
       </div>
       ${product.pricePerKg ? pricePerKgTmpl : ''}
       <div class="c-prodotto__tags">
