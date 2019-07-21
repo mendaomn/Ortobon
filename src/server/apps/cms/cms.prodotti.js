@@ -7,9 +7,16 @@ class CMSProdotti {
       .find()
   }
 
-  static getDataById( id ) {
+  static getDataByID( id ) {
     return ProdottoList.model
       .findById( id )
+      .populate( 'recipes' )
+      .catch(err => console.error(err));
+  }
+  
+  static getDataBySlug( slug ) {
+    return ProdottoList.model
+      .findOne( {slug} )
       .populate( 'recipes' );
   }
 }

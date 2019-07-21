@@ -17,7 +17,12 @@ var Prodotto = new keystone.List( 'Prodotto', {
 Prodotto.add( {
   name: {
     type: String,
-    required: true
+    required: true,
+    label: "Nome del prodotto, non dovrebbe MAI cambiare"
+  },
+  nameAdditions: {
+    type: String,
+    label: "Aggiunte al nome, es- \"- Basilicata\""
   },
   shopifyID: {
     type: String,

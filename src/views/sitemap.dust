@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {#pages}
 	<url>
-		<loc>{.}</loc>
-		<changefreq>monthly</changefreq>
+		<loc>{url}</loc>
+		<changefreq>{changefreq}</changefreq>
   </url>
   {/pages}
   {#products}
 	<url>
 		<loc>{url}</loc>
-		<changefreq>monthly</changefreq>
+		<changefreq>{changefreq}</changefreq>
   </url>
   {/products}
 </urlset>

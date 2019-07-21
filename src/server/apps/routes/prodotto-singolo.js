@@ -43,11 +43,16 @@ const productsOptions = {
 // Set "Prodotti" to active
 productsOptions.navitems[ 1 ].active = true;
 
-function singleProductRoute( req, res ) {
-  const product_id = req.params.id;
+async function singleProductRoute( req, res ) {
+  const product_slug = req.params.slug
+  
+  const product = await cms.prodotti.getDataByID(product_slug)
+  if (product) {
+    return res.redirect(301, req.url.replace(product_slug, product.slug))
+  }
 
   Promise.all( [
-      cms.prodotti.getDataById( product_id ),
+      cms.prodotti.getDataBySlug( product_slug ),
       cms.footer.getData()
     ] )
     .then( cmsData => {

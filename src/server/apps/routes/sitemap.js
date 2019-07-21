@@ -6,17 +6,18 @@ const DOMAIN = 'http://www.orto-bon.it'
 
 function sitemapRoute( req, res ) {
   const pages = [
-    `${DOMAIN}/`,
-    `${DOMAIN}/prodotti`,
-    `${DOMAIN}/about`,
+    {url: `${DOMAIN}/`, changefreq: 'monthly'},
+    {url: `${DOMAIN}/prodotti`, changefreq: 'weekly'},
+    {url: `${DOMAIN}/about`, changefreq: 'monthly'}
   ]
 
   const products = []
 
   cms.prodotti.getData().then( data => {
-    data.forEach( p => {
+    data.forEach( (p, i) => {
       products.push({
-        url: `${DOMAIN}/prodotti/${p.id}`
+        url: `${DOMAIN}/prodotti/${p.slug}`,
+        changefreq: 'weekly'
       })
     })
 

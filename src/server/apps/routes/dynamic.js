@@ -33,7 +33,7 @@ dynamic.use( (req, res, next) => {
 // Routes
 dynamic.get( '/', require( './home.js' ) );
 dynamic.get( '/prodotti', require( './prodotti.js' ) );
-dynamic.get( '/prodotti/:id', require( './prodotto-singolo.js' ) );
+dynamic.get( '/prodotti/:slug', require( './prodotto-singolo.js' ) );
 dynamic.get( '/blog', require( './blog.js' ) );
 dynamic.get( '/blog/:id', require( './articolo.js' ) );
 dynamic.get( '/about', require( './about.js' ) );

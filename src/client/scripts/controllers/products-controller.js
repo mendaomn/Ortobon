@@ -45,13 +45,13 @@ export default class ProductsController {
   </div>` : '';
     const pricePerKgTmpl = `<div class="c-prodotto__price-label">${product.pricePerKg}€ Al Kg</div>`
 
-    return `<a class="o-card c-prodotto" href="/prodotti/${product.id}" id="${product.id}" data-id="${product.id}" title="${product.name}">
+    return `<a class="o-card c-prodotto" href="/prodotti/${product.slug}" id="${product.id}" data-id="${product.id}" title="${product.name}">
     <div class="${prodottoClassList}"
         style="background-image: url(${product.image})">
     </div>
     <div class="c-prodotto__info-wrapper">
       <div class="c-prodotto__name">
-        ${product.name}
+        ${product.name + (product.nameAdditions || '')}
       </div>
       ${product.pricePerKg ? pricePerKgTmpl : ''}
       <div class="c-prodotto__tags">
