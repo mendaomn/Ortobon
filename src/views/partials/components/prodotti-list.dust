@@ -16,6 +16,7 @@
         shopifyID: "{shopifyID}",
         slug: "{slug}",
         name: "{name}",
+        nameAdditions: "{nameAdditions}",
         type: "{type}",
         image: "{image.secure_url}",
         offer: "{offer}",
