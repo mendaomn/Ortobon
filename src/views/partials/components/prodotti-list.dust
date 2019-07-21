@@ -10,7 +10,7 @@
 </section>
 <script>
   window.productsList = [
-    {#content}
+    {#products}
       {  
         id: "{id}",
         shopifyID: "{shopifyID}",
@@ -28,7 +28,7 @@
         prodPropria: "{prodPropria}",
         active: "{active}"
       },
-    {/content}
+    {/products}
   ]
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
     "@context": "http://schema.org",
     "@type": "ItemList",
     "itemListElement": [
-      {#content}
+      {#products}
       {
         "@type": "ListItem",
         "position": {$idx},
@@ -47,7 +47,7 @@
           "image": "{image.secure_url}"
         }
       }{@sep},{/sep}
-      {/content}
+      {/products}
     ]
   }
   </script>

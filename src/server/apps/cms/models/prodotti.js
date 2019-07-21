@@ -11,7 +11,7 @@ var ProdottiPage = new keystone.List( 'ProdottiPage', {
   label: 'Pagina Prodotti',
   singular: 'Pagina Prodotti',
   plural: 'Pagina Prodotti',
-  // nocreate: true,
+  nocreate: true,
   nodelete: true
 } );
 

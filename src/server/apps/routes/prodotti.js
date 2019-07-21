@@ -53,13 +53,16 @@ function productsRoute( req, res ) {
       cms.footer.getData()
     ] )
     .then( cmsData => {
-      let [ prodottiData, pageData, categories, footerData ] = cmsData;
+      let [ pageData, prodottiData, categories, footerData ] = cmsData;
 
-      productsOptions.inlines.cms = `window.initialState={ products: ${JSON.stringify(pageData)}}`
+      productsOptions.inlines.cms = `window.initialState={ products: ${JSON.stringify(prodottiData)}}`
 
-      productsOptions.mastheadtitle = prodottiData.mastheadtitle;
+      productsOptions.mastheadtitle = pageData.mastheadtitle;
+
+      console.log(pageData)
 
       productsOptions.content = pageData
+      productsOptions.products = prodottiData
         .sort( (a, b) => a.name > b.name ? 1 : -1 )
         .map( resizeImage );
       productsOptions.categories = categories;
