@@ -59,8 +59,6 @@ function productsRoute( req, res ) {
 
       productsOptions.mastheadtitle = pageData.mastheadtitle;
 
-      console.log(pageData)
-
       productsOptions.content = pageData
       productsOptions.products = prodottiData
         .sort( (a, b) => a.name > b.name ? 1 : -1 )
